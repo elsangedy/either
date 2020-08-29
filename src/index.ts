@@ -1,12 +1,10 @@
 type Left<L, R> = {
   __type: 'Left'
-  // value: L
   fold: <T = any>(isLeft: (left: L) => T, isRight: (right: R) => T) => T
 }
 
 type Right<L, R> = {
   __type: 'Right'
-  // value: R
   fold: <T = any>(isLeft: (left: L) => T, isRight: (right: R) => T) => T
 }
 
@@ -14,13 +12,11 @@ export type Either<L, R> = Left<L, R> | Right<L, R>
 
 export const left = <L, R>(value: L): Left<L, R> => ({
   __type: 'Left',
-  // value,
   fold: (l, _) => l(value),
 })
 
 export const right = <L, R>(value: R): Right<L, R> => ({
   __type: 'Right',
-  // value,
   fold: (_, r) => r(value),
 })
 
