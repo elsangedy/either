@@ -1,0 +1,6 @@
+/dist
+/node_modules
+/npm-debug.log
+/index.d.ts
+.DS_Store
+.idea
