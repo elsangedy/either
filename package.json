@@ -23,7 +23,7 @@
     "clean": "rimraf dist",
     "build": "yarn clean && yarn bundle",
     "bundle": "microbundle",
-    "release": "yarn run -s build -s && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
+    "release": "yarn run -s build -s && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish --access=public"
   },
   "devDependencies": {
     "microbundle": "^0.12.3",
